@@ -3,35 +3,35 @@
 $hotels = [
     [
         'name' => 'Hotel Belvedere',
-        'description' => 'Hotel Belvedere Descrizione',
+        'description' => 'Hotel Belvedere',
         'parking' => true,
         'vote' => 4,
         'distance_to_center' => 10.4
     ],
     [
         'name' => 'Hotel Futuro',
-        'description' => 'Hotel Futuro Descrizione',
+        'description' => 'Hotel Futuro',
         'parking' => true,
         'vote' => 2,
         'distance_to_center' => 2
     ],
     [
         'name' => 'Hotel Rivamare',
-        'description' => 'Hotel Rivamare Descrizione',
+        'description' => 'Hotel Rivamare',
         'parking' => false,
         'vote' => 1,
         'distance_to_center' => 1
     ],
     [
         'name' => 'Hotel Bellavista',
-        'description' => 'Hotel Bellavista Descrizione',
+        'description' => 'Hotel Bellavista',
         'parking' => false,
         'vote' => 5,
         'distance_to_center' => 5.5
     ],
     [
         'name' => 'Hotel Milano',
-        'description' => 'Hotel Milano Descrizione',
+        'description' => 'Hotel Milano',
         'parking' => true,
         'vote' => 2,
         'distance_to_center' => 50
