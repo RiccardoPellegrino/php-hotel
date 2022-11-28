@@ -39,18 +39,26 @@ $hotels = [
 
 ];
 
-if (isset($_GET['type']) && !empty($_GET['type'])) {
-    // var_dump($_GET);
-    $temp = [];
-    foreach ($hotels as $item) {
+if (isset($_GET['parking']) && !empty($_GET['parking'])) {
 
-        if ($item['parking'] == true) {
+
+    $temp = [];
+
+
+    foreach ($hotels as $item) {
+        $park = $item['parking'] ? 'si' : 'no';
+
+        if ($park == $_GET['parking']) {
+
             $temp[] = $item;
         }
     }
-    ;
     $hotels = $temp;
-    // var_dump($hotels);
+}
+
+if (isset($_GET['vote']) && !empty($_GET['vote'])) {
+    $vote = $_GET['vote'];
+    $hotels = array_filter($hotels, fn($value) => $value['vote'] >= $vote);
 }
 ?>
 <!DOCTYPE html>
@@ -74,10 +82,18 @@ if (isset($_GET['type']) && !empty($_GET['type'])) {
         <form action="index.php" method="GET" name="filtro">
             <div class="mb-3 mt-3">
                 <label for="type">
-                    <select name="type" id="">
-                        <option value="">Scegli</option>
-                        <option value="parking">Parcheggio</option>
-                        <!-- <option value="false">Votazione</option> -->
+                    <select name="parking">
+                        <option value="" selected>Tutti</option>
+                        <option value="si">Parcheggio</option>
+                        <option value="no">No parcheggio</option>
+                    </select>
+                    <select name="vote" id="vote">
+                        <option value="" selected>scegli </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                     <div> <button type="submit" class="btn btn-secondary mt-3">invia</button></div>
 
