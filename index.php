@@ -80,7 +80,7 @@ if (isset($_GET['vote']) && !empty($_GET['vote'])) {
     <div class="container">
         <h1 class="text-warning text-center">Lista Hotel</h1>
         <form action="index.php" method="GET" name="filtro">
-            <div class="mb-3 mt-3">
+            <div class="mb-3 mt-3 d-flex justify-content-center">
                 <label for="type">
                     <select name="parking">
                         <option value="" selected>Tutti</option>
@@ -95,7 +95,8 @@ if (isset($_GET['vote']) && !empty($_GET['vote'])) {
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                    <div> <button type="submit" class="btn btn-secondary mt-3">invia</button></div>
+                    <div class="d-flex justify-content-center"> <button type="submit"
+                            class="btn btn-secondary mt-3">invia</button></div>
 
                 </label>
             </div>
