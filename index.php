@@ -78,7 +78,7 @@ if (isset($_GET['vote']) && !empty($_GET['vote'])) {
 
 <body class="bg-dark ">
     <div class="container">
-        <h1 class="text-warning text-center mt-3">Lista Hotel</h1>
+        <h1 class="text-warning text-center mt-2">Lista Hotel</h1>
         <form action="index.php" method="GET" name="filtro">
             <div class="mb-3 mt-3 d-flex justify-content-center">
                 <label for="type">
