@@ -68,8 +68,9 @@ if (isset($_GET['type']) && !empty($_GET['type'])) {
     <title>PHP hotel</title>
 </head>
 
-<body>
+<body class="bg-dark ">
     <div class="container">
+        <h1 class="text-warning text-center">Lista Hotel</h1>
         <form action="index.php" method="GET" name="filtro">
             <div class="mb-3 mt-3">
                 <label for="type">
@@ -83,9 +84,9 @@ if (isset($_GET['type']) && !empty($_GET['type'])) {
                 </label>
             </div>
         </form>
-        <table class='table'>
+        <table class='table text-white'>
             <thead>
-                <tr>
+                <tr class="text-danger">
                     <th scope='col'>Name</th>
                     <th scope='col'>Description</th>
                     <th scope='col'>Parking</th>
